@@ -1,6 +1,8 @@
 {
     "name" : "Bookmarks in Google",
     "version": "1.0",
+    "author": "Arian Alavi",
+    "homepage_url": "https://github.com/AriAlavi/bookmarks_in_google",
     "manifest_version": 2,
     "permissions" : [
         "bookmarks"

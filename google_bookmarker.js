@@ -21,8 +21,10 @@ function getURL(element){
 bookmarks = []
 
 function getBaseUrl(url){
-    var split_url = url.split("/");
-    return split_url[0] + "//" + split_url[2];
+    // var split_url = url.split("/");
+    // return split_url[0] + "//" + split_url[2];
+    var split_url = url.split("/")
+    return split_url[0];
 }
 
 function baseBookmarks(bookmark_list){
@@ -34,10 +36,18 @@ function baseBookmarks(bookmark_list){
     return url_list
 }
 
+function urlExtraRemover(url){
+    url = url.replace("www.", "")
+    url = url.replace("http://", "")
+    url = url.replace("https://", "")
+    return url;
+}
+
 function checkBookmark(url){
+    url = urlExtraRemover(url);
     highest = 0;
     for(var bookmark in bookmarks){
-        bookmark = bookmarks[bookmark]
+        bookmark = urlExtraRemover(bookmarks[bookmark])
         if(url == bookmark){
             return 3;
         }
@@ -74,7 +84,6 @@ chrome.runtime.sendMessage(
             url = getURL(result);
             bookmark_level = checkBookmark(url)
             if(bookmark_level > 0){
-                console.log(result)
                 result.style["backgroundColor"] = BOOKMARK_LEVEL_MAP[bookmark_level];
                 result.style["padding"] = "4px";
                 if(bookmark_level == 3){
