@@ -1,7 +1,6 @@
-# bookmarks_in_google
+# Bookmarks in Google
 
 ![Example 1](https://github.com/AriAlavi/bookmarks_in_google/blob/master/image1.png)
-![Example 2](https://github.com/AriAlavi/bookmarks_in_google/blob/master/image2.png)
 
 What does this extension do?
 
@@ -17,3 +16,4 @@ This may not be a problem when searching for "Youtube" or other extremely popula
 
 Yet, many people's muscle memory is to Google the website they want to go to. This is where this extension comes in. First, bookmark your favorite websites. Then, when you want to access one of them, you can Google it as usual. If a result is highlighted yellow, then you can be sure that it is the website you're looking for. If the website has no highlight, then it is not in your bookmarks and may be a phishing website (if you are sure you bookmarked it). 
 
+![Example 2](https://github.com/AriAlavi/bookmarks_in_google/blob/master/image2.png)
