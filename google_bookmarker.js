@@ -1,8 +1,4 @@
-// alert(document.documentElement.innerHTML);
-
 search_results = document.getElementsByClassName("g");
-cites = document.getElementsByTagName("cite");
-web_results_flag = false;
 
 function checkWebResults(element){
     if(element.children[0].textContent == "Web results"){
@@ -15,13 +11,7 @@ function checkSearch(element){
     if(element.classList.length > 1){
         return false;
     }
-    if(web_results_flag){
-        return true;
-    }
-    if(checkWebResults(element)){
-        web_results_flag = true;
-        return true;
-    }
+    return true;
 }
 
 function getURL(element){
@@ -84,6 +74,7 @@ chrome.runtime.sendMessage(
             url = getURL(result);
             bookmark_level = checkBookmark(url)
             if(bookmark_level > 0){
+                console.log(result)
                 result.style["backgroundColor"] = BOOKMARK_LEVEL_MAP[bookmark_level];
                 result.style["padding"] = "4px";
                 if(bookmark_level == 3){
