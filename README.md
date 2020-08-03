@@ -1,4 +1,5 @@
 # Bookmarks in Google
+https://chrome.google.com/webstore/detail/bookmarks-in-google/egnehfkdejemmjlgphgeblpaocmakphe/reviews
 
 ![Example 1](https://github.com/AriAlavi/bookmarks_in_google/blob/master/image1.png)
 
